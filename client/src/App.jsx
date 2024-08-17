@@ -1,6 +1,4 @@
-import React from 'react'; // If needed
- 
-
+  
 import './App.css'
 import axios from 'axios' 
 import Layout from './Layout'

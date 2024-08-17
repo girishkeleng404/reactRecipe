@@ -1,13 +1,15 @@
- 
- 
+
+
 import './App.css'
 
+import Layout from './Layout'
+
 function App() {
-   
+
 
   return (
     <div>
-       <h1 className='bg-red-300'>Testing</h1>
+      <Layout />
     </div>
   )
 }

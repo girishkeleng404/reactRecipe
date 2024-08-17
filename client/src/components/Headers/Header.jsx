@@ -1,7 +1,12 @@
 export default function Header(){
     return (
-        <div>
-            <h1 className='bg-red-600'>Testing Header sdf</h1>
+        <div className="flex justify-around items-baseline bg-slate-100 py-4">
+            <div>
+                <p className="text-xl"> Recipes </p> 
+            </div>
+            <div>
+                <p>About</p>
+            </div>
         </div>
     )
 }

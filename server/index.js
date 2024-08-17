@@ -44,6 +44,21 @@ app.post("/dishs",async (req,res)=>{
     }
 })
 
+ app.post('/details/:id', async(req,res)=>{
+    const {id} = req.params;
+
+    try {
+        const response = await axios.get(`${API2}${id}${API3}`,config);
+        if(response.data === 0){
+            res.json({message:"No data found"});
+        } 
+        res.json(response.data);
+    } catch (error) {
+        console.log(error);
+        
+    }
+ })
+
 
 app.listen(port, async()=>{
     console.log(`Server is running on port ${port}`);

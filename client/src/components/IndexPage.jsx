@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Layout from "../Layout";
 import Footer from "./Footers/Footer";
+import { UserContext } from "../UserContex";
+import { useNavigate } from "react-router-dom";
 
 export default function IndexPage() {
+
+    const {data,setData}= useContext(UserContext);
+    const navigate = useNavigate();
 
     const [inputDish, setInputDish] = useState("");
     const [cuisine, setCuisine] = useState("");
@@ -12,24 +17,39 @@ export default function IndexPage() {
     const [includeIngredients, setIncludeIngredients] = useState("");
     const [excludeIngredients, setExcludeIngredients] = useState("");
     const [filter, setFilter] = useState(false);
+    // const [dishsList, setDishsList] = useState([]);
+
+    
 
     const fetchData = async () => {
         console.log(inputDish, cuisine, diet, type, includeIngredients, excludeIngredients);
+        try {
+           const response = await fetch("http://localhost:4000/dishs", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    dishName: inputDish,
+                    cuisine: cuisine,
+                    diet: diet,
+                    type: type,
+                    includeIngredients: includeIngredients,
+                    excludeIngredients: excludeIngredients
+                }),
+            })
+            const data = await response.json();
+            console.log(data);
+            // setDishsList(data);
+            setData(data);
+            navigate("/recipeList");
 
-        await fetch("http://localhost:4000/dishs", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                dishName: inputDish,
-                cuisine: cuisine,
-                diet: diet,
-                type: type,
-                includeIngredients: includeIngredients,
-                excludeIngredients: excludeIngredients
-            }),
-        })
+        } catch (error) {
+            console.log(error);
+        }
+       
+
+       
     }
 
     const filterToggle = (ev) => {

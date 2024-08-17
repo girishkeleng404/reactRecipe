@@ -1,12 +1,19 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 
 export const UserContext = createContext({});
 export function UserContextProvider({children}) {
-    const [user, setUser] = useState(null);
+    const [data, setData] = useState(()=>{
+        const storedData = localStorage.getItem('recipeData');
+        return storedData ? JSON.parse(storedData) : [];
+    });
+
+  useEffect(()=>{
+    localStorage.setItem('recipeData', JSON.stringify(data));
+  },[data])
 
     return (
-        <UserContext.Provider value={{ user, setUser }}>
+        <UserContext.Provider value={{ data,setData }}>
             {children}
         </UserContext.Provider>
     )

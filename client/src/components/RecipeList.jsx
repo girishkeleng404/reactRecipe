@@ -14,9 +14,9 @@ export default function RecipeList() {
 
                 {data.results && data.results.length > 0 ? (
                     data.results.map((dish, inx) => (
-                        <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center bg-green-200 p-0">
+                        <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center ">
                             <div >
-                                <p>{dish.id}</p>
+                                
                                  <h3 className="recipe-title">{dish.title}</h3>
                             <img
                                 src={dish.image}

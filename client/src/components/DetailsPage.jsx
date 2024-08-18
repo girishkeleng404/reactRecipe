@@ -6,6 +6,7 @@ import Ingredients from "./DetailsFolder/Ingredients";
 import Highlights from "./DetailsFolder/Highlights";
 import Steps from "./DetailsFolder/Steps";
 import Summary from "./DetailsFolder/Summary";
+import DetailsHead from "./DetailsFolder/DetailsHead";
 
 export default function DetailsPage() {
 
@@ -37,30 +38,8 @@ export default function DetailsPage() {
             <div className="w-11/12 lg:w-9/12 bg-slate-50 mx-auto">
 
                 <div className="grid gap-6 py-6">
-                    <div className="flex justify-between items-baseline">
-
-                        <h1 className="text-6xl text-gray-700 mx-4"> {details.title} </h1>
-
-                        <div className="grid grid-cols-4 gap-4 mx-4">
-                            <div className=" gap-1  ">
-                                <img src="https://spoonacular.com/application/frontend/images/badges/gluten-free.svg" alt="" />
-                                <span>G-free</span>
-                            </div>
-                            <div>
-                                <img src="https://spoonacular.com/application/frontend/images/badges/dairy-free.svg" alt="" />
-                                <span>D-free</span>
-                            </div>
-                            <div>
-                                <img src="https://spoonacular.com/application/frontend/images/badges/paleo.svg" alt="" /> <span>paleo</span>
-                            </div>
-                            <div>
-                                <img src="https://spoonacular.com/application/frontend/images/badges/primal.svg" alt="" />
-                                <span>primal</span>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    <DetailsHead details={details} />
+                   
 
                     <div className="grid lg:grid-cols-[3fr_2fr] gap-12  bg-white/80 rounded-3xl  p-6 drop-shadow-2xl">
 

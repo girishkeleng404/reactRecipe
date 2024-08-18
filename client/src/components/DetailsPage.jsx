@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import Header from "./Headers/Header";
 import { useParams } from "react-router-dom";
 import axios from 'axios'
+import Ingredients from "./DetailsFolder/Ingredients";
+import Highlights from "./DetailsFolder/Highlights";
+import Steps from "./DetailsFolder/Steps";
+import Summary from "./DetailsFolder/Summary";
 
 export default function DetailsPage() {
 
@@ -30,52 +34,52 @@ export default function DetailsPage() {
     return (
         <div>
             <Header />
-            <div className="w-9/12  mx-auto">
+            <div className="w-11/12 lg:w-9/12 bg-slate-50 mx-auto">
 
-                <div className="grid gap-6 my-6">
-                    <div>  <h1 className="text-6xl"> {details.title} </h1> </div>
+                <div className="grid gap-6 py-6">
+                    <div className="flex justify-between items-baseline">
 
-                    <div className="grid lg:grid-cols-[3fr_2fr] gap-12">
+                        <h1 className="text-6xl text-gray-700 mx-4"> {details.title} </h1>
 
-
-                        <div className=" h-min grid">
-
-                            <img className="w-full object-cover" src={details.image} alt={details.title} />
-
-                            <div className="grid grid-cols-4  w-full">
-
-                                {details.nutrition &&
-                                    details.nutrition.nutrients
-                                        .filter(nutrient =>
-                                            ["Calories", "Protein", "Fat", "Carbohydrates"].includes(nutrient.name)
-                                        )
-                                        .map((nutrient, inx) => (
-                                            <div key={inx} className="m-2  ">
-                                                {nutrient.name === "Calories" && <p className="grid text-sm">Calories: <span className="text-2xl">{nutrient.amount}{nutrient.unit} </span></p>}
-                                                {nutrient.name === "Protein" && <p className="grid text-sm">Protein: <span className="text-2xl">{nutrient.amount}{nutrient.unit} </span></p>}
-                                                {nutrient.name === "Fat" && <p className="grid text-sm">Fat: <span className="text-2xl">{nutrient.amount}{nutrient.unit} </span></p>}
-                                                {nutrient.name === "Carbohydrates" && <p className="grid text-sm">Carbs: <span className="text-2xl">{nutrient.amount}{nutrient.unit} </span></p>}
-                                            </div>
-                                        ))
-                                }
-
+                        <div className="grid grid-cols-4 gap-4 mx-4">
+                            <div className=" gap-1  ">
+                                <img src="https://spoonacular.com/application/frontend/images/badges/gluten-free.svg" alt="" />
+                                <span>G-free</span>
                             </div>
-                        </div>
+                            <div>
+                                <img src="https://spoonacular.com/application/frontend/images/badges/dairy-free.svg" alt="" />
+                                <span>D-free</span>
+                            </div>
+                            <div>
+                                <img src="https://spoonacular.com/application/frontend/images/badges/paleo.svg" alt="" /> <span>paleo</span>
+                            </div>
+                            <div>
+                                <img src="https://spoonacular.com/application/frontend/images/badges/primal.svg" alt="" />
+                                <span>primal</span>
+                            </div>
 
-                        <div className="">
-                            <h1 className="text-3xl mb-6">Ingredients:</h1>
-                            {details.extendedIngredients && details.extendedIngredients.map((ingredient, inx) => (
-                                <div key={inx} className="m-2  ">
-                                    
-                                     
-                                    <p className="capitalize">{ingredient.original} </p>
-
-
-                                </div>
-                            ))}
                         </div>
 
                     </div>
+
+                    <div className="grid lg:grid-cols-[3fr_2fr] gap-12  bg-white/80 rounded-3xl  p-6 drop-shadow-2xl">
+
+                        <div className=" h-min grid">
+
+                            <img className="w-full object-cover rounded-3xl" src={details.image} alt={details.title} />
+
+                            <Highlights details={details} />
+
+                        </div>
+
+                        <Ingredients details={details} />
+
+                    </div>
+
+
+                    <Steps details={details} />
+                    <Summary details={details} />
+
                 </div>
             </div>
 
@@ -83,50 +87,5 @@ export default function DetailsPage() {
 
         </div>
     )
-    // return (
-    //     <div>
-    //         <Header />
-    //         <h1 className="text-3xl"> {details.title} </h1>
 
-
-
-    //         <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
-
-    //        <div className="grid grid-cols-[3fr_2fr]">
-
-
-    //         <div className="grid grid-cols-3 px-6 h-min">
-    //         {details.extendedIngredients && details.extendedIngredients.map((ingredient, inx) => (
-    //             <div key={inx} className="m-2  ">
-    //                 <p>Alise: {ingredient.aisle} </p>
-    //               <p> Name: {ingredient.name} </p>  
-    //               {/* <p>Amount : {ingredient.amount} </p> */}
-    //               {/* <p>Consistency : {ingredient.consistency} </p> */}
-    //               <p>original :{ingredient.original} </p>
-
-
-    //             </div>
-    //         ))}
-    //         </div>
-    //         <div className="bg-yellow-100 h-min">
-    //             <img src={details.image} alt={details.title} />
-    //         </div>
-    //         </div>
-    //       <div>
-
-    //      <p className="text-3xl">Nutrition values:</p>
-    //         <div className="w-full  grid grid-cols-3">
-
-    //           {details.nutrition && details.nutrition.nutrients.map((nutrient, inx) => (
-    //                 <div key={inx} className="m-2">
-    //                     <p> Name: {nutrient.name}  </p>
-    //                     <p>Amount : {nutrient.amount}{nutrient.unit}</p>
-    //                     <p>DailyNeeds: {nutrient.percentOfDailyNeeds}% </p>
-    //                 </div>
-    //           ))}
-    //         </div>
-    //         </div>
-    //         </div>
-    //     </div>
-    // )
 }

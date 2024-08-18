@@ -1,6 +1,6 @@
 export default function Header(){
     return (
-        <div className="flex justify-around items-baseline bg-slate-100 py-4">
+        <div className="flex justify-around items-baseline bg-gray-50 py-4">
             <div>
                 <p className="text-xl"> Recipes </p> 
             </div>

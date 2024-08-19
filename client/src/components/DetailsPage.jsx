@@ -14,6 +14,7 @@ export default function DetailsPage() {
     const { id } = useParams();
     const [details, setDetails] = useState([]);
     const { data } = useContext(UserContext);
+     
 
 
     useEffect(() => {
@@ -31,6 +32,7 @@ export default function DetailsPage() {
         // if (details.length === 0) {
         fetchDetails();
         // }
+        window.scrollTo(0, 0);
 
     }, [id])
 
@@ -67,22 +69,21 @@ export default function DetailsPage() {
                 <div>
                     <h2 className="text-3xl text-center">More Recipes</h2>
                     <div className="grid grid-cols-2 lg:grid-cols-5 mx-auto gap-5 my-8" >
-                        {data.results && data.results.length > 0 ? (
-                            data.results.map((dish, inx) => (
-                                <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center mb-8 rounded-lg drop-shadow-2xl">
-                                    <div >
-
-
-                                        <img
-                                            src={dish.image}
-                                            alt={dish.title}
-                                            className="w-full h-60 object-cover rounded-lg "
-                                        />
-                                        <h3 className="recipe-title text-lg">{dish.title}</h3>
-                                    </div>
-
-                                </Link>
-                            ))
+                    {data.results && data.results.length > 0 ? (
+                            data.results
+                                .filter(dish => dish.id !== details.id) // Filter out the current recipe
+                                .map(dish => (
+                                    <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center mb-8 rounded-lg drop-shadow-2xl">
+                                        <div>
+                                            <img
+                                                src={dish.image}
+                                                alt={dish.title}
+                                                className="w-full h-60 object-cover rounded-lg"
+                                            />
+                                            <h3 className="recipe-title text-lg">{dish.title}</h3>
+                                        </div>
+                                    </Link>
+                                ))
                         ) : (
                             <p>No recipes found.</p>
                         )}

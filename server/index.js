@@ -36,7 +36,7 @@ const config ={
 app.post("/dishs",async (req,res)=>{
     const {dishName,cuisine,diet,type,includeIngredients,excludeIngredients} = req.body;
     try {
-        const response = await axios.get(`${API1}query=${dishName}&cuisine=${cuisine}&diet=${diet}&type=${type}&includeIngredients=${includeIngredients}&excludeIngredients=${excludeIngredients}&number=20`,config);
+        const response = await axios.get(`${API1}query=${dishName}&cuisine=${cuisine}&diet=${diet}&type=${type}&includeIngredients=${includeIngredients}&excludeIngredients=${excludeIngredients}&number=50`,config);
         res.json(response.data);
     } catch (error) {
         console.log(error);

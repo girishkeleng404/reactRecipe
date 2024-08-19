@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from "../UserContex"
 import { Link } from "react-router-dom";
+import Header from "./Headers/Header";
 
 export default function RecipeList() {
 
@@ -9,20 +10,22 @@ export default function RecipeList() {
 
     return (
         <div>
+            <Header/>
 
-            <div className="grid grid-cols-5 mx-auto gap-5">
+            <div className="grid grid-cols-5 mx-auto gap-5 my-8">
 
                 {data.results && data.results.length > 0 ? (
                     data.results.map((dish, inx) => (
-                        <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center ">
+                        <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center mb-8 rounded-lg drop-shadow-2xl">
                             <div >
                                 
-                                 <h3 className="recipe-title">{dish.title}</h3>
+                               
                             <img
                                 src={dish.image}
                                 alt={dish.title}
-                                className=""
+                                className="w-full h-60 object-cover rounded-lg "
                             />
+                              <h3 className="recipe-title text-lg">{dish.title}</h3>
                             </div>
                            
                         </Link>

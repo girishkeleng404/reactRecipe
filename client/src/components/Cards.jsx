@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+
 
 export default function Cards({recipesPerPage, data, gridClassName}) {
     const [currentPage, setCurrentPage] = useState(1);
@@ -9,6 +11,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
 
     const totalPages = Math.ceil(data.results.length / recipesPerPage);
 
+    
 
 
     function handleNextPage() {
@@ -63,7 +66,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
     <div>
         <button onClick={handlePreviousPage} disabled={currentPage === 1} >
             
-          {/* <ArrowBackIosIcon/> */}
+          <ArrowBackIosNewIcon/>
           Prev
         </button>
     </div>

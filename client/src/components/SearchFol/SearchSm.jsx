@@ -2,6 +2,7 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../../UserContex";
 import { useNavigate } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 
 export default function SearchSm() {
@@ -58,7 +59,7 @@ export default function SearchSm() {
 
 
     return (
-        <div>
+        <div className="w-screen overflow-hidden">
 
 
 

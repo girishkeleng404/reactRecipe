@@ -8,12 +8,14 @@ import Steps from "./DetailsFolder/Steps";
 import Summary from "./DetailsFolder/Summary";
 import DetailsHead from "./DetailsFolder/DetailsHead";
 import { UserContext } from "../UserContex";
+import Cards from "./Cards";
 
 export default function DetailsPage() {
 
     const { id } = useParams();
     const [details, setDetails] = useState([]);
     const { data } = useContext(UserContext);
+    const recipesPerPage = 12;
      
 
 
@@ -36,6 +38,10 @@ export default function DetailsPage() {
 
     }, [id])
 
+    const filteredData = {
+        ...data,
+        results: data.results.filter(dish => dish.id !== details.id)
+    };
 
     return (
         <div>
@@ -66,9 +72,13 @@ export default function DetailsPage() {
 
                 </div>
 
+
+
+
                 <div>
-                    <h2 className="text-3xl text-center">More Recipes</h2>
-                    <div className="grid grid-cols-2 lg:grid-cols-5 mx-auto gap-5 my-8" >
+                    <h2 className="text-3xl text-start mx-6">More Recipes</h2>
+
+                    {/* <div className="grid grid-cols-2 lg:grid-cols-4 mx-auto gap-5 my-8" >
                     {data.results && data.results.length > 0 ? (
                             data.results
                                 .filter(dish => dish.id !== details.id) // Filter out the current recipe
@@ -87,8 +97,14 @@ export default function DetailsPage() {
                         ) : (
                             <p>No recipes found.</p>
                         )}
-                    </div>
+                    </div> */}
+
+                    <Cards data={filteredData} recipesPerPage={recipesPerPage} gridClassName="grid-cols-2 lg:grid-cols-4" />
                 </div>
+
+
+
+
 
             </div>
 

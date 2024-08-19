@@ -68,7 +68,8 @@ export default function SearchSm() {
 
                         <input
                             type="text"
-                            className=" rounded-md h-10 w-10/12 outline-none text-lg px-4  "
+                            className=" rounded-md h-10 w-10/12 outline-none text-lg px-4 bg-transparent "
+                            placeholder="Search for a dish"
                             onChange={(ev) => setInputDish(ev.target.value)}
                             onKeyDown={(ev) => { if (ev.key === "Enter") fetchData() }}
                         />

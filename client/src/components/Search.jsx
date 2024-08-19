@@ -34,9 +34,9 @@ export default function Search() {
 
 
     return (
-        <div className="relative h-full w-screen">
+        <div className="relative h-full w-screen ">
         {/* Use fixed positioning for the header */}
-        <div className="fixed top-0 left-0 w-full bg-white z-10 shadow-md">
+        <div className="fixed top-0 left-0 w-full bg-white z-10 shadow-md bg-opacity-60 backdrop-blur-2xl drop-shadow-xl">
             <Header />
             <SearchSm />
         </div>

@@ -25,6 +25,7 @@ app.get('/',async (req,res)=>{
 const API1 = process.env.API1;
 const API2 = process.env.API2;
 const API3 = process.env.API3;
+// const API4 = process.env.API4;
 
 const config ={
     headers:{
@@ -59,6 +60,15 @@ app.post("/dishs",async (req,res)=>{
     }
  })
 
+
+ app.get('/random', async(req,res)=>{
+    try{
+        const response = await axios.get(`${process.env.API4}`,config);
+        res.json(response.data);
+    } catch(error){
+        console.log(error);
+    }
+ })
 
 app.listen(port, async()=>{
     console.log(`Server is running on port ${port}`);

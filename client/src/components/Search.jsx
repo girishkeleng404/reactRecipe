@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Headers/Header";
-import SearchSm from "./SearchSm";
+import SearchSm from "./SearchFol/SearchSm";
+import RandomRecipes from "./SearchFol/randomRecipes";
 
 
 export default function Search() {
@@ -11,7 +12,7 @@ export default function Search() {
 
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:4000/dishs", {
+                const response = await fetch("http://localhost:4000/random", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -20,7 +21,7 @@ export default function Search() {
                 const data = await response.json();
                 console.log(data);
                 setListData(data);
-                ;
+                
             }
             catch (error) {
                 console.log(error);
@@ -33,14 +34,18 @@ export default function Search() {
 
 
     return (
-        <div>
-            <div>
-                <Header />
-            </div>
-            <div>
-                <SearchSm />
-            </div>
+        <div className="relative h-full w-screen">
+        {/* Use fixed positioning for the header */}
+        <div className="fixed top-0 left-0 w-full bg-white z-10 shadow-md">
+            <Header />
+            <SearchSm />
         </div>
+
+        {/* Add padding-top to the main content to avoid overlap */}
+        <div className="pt-96 mx-2">
+            <RandomRecipes recipes={listData} />
+        </div>
+    </div>
     )
 
 }

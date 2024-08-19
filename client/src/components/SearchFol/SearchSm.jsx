@@ -1,6 +1,6 @@
 
 import { useContext, useState } from "react";
-import { UserContext } from "../UserContex";
+import { UserContext } from "../../UserContex";
 import { useNavigate } from "react-router-dom";
 
 
@@ -80,7 +80,7 @@ export default function SearchSm() {
                     </div>
                 </div>
                 {filter && (
-                    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mx-2">
+                    <div className=" grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mx-2">
 
 
                         <label className="gap-4 flex justify-between items-baseline" htmlFor="">Cuisine :

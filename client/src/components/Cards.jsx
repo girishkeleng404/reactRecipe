@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 export default function Cards({recipesPerPage, data, gridClassName}) {
@@ -75,7 +76,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
         <button onClick={handleNextPage} disabled={currentPage === totalPages} >
            
             Next
-            {/* <ArrowForwardIosIcon/> */}
+            <ArrowForwardIosIcon/>
         </button>
     </div>
 </div>

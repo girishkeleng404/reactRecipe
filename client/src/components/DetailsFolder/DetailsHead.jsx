@@ -1,11 +1,11 @@
 export default function DetailsHead({ details }) {
     return (
         <div>
-            <div className="grid grid-cols-[5fr_2fr] items-baseline">
+            <div className="grid grid-cols-[5fr_2fr] items-center">
                 <div>
-                    <h1 className="text-5xl text-gray-700 mx-4"> {details.title} </h1>
+                    <h1 className="text-3xl lg:text-5xl text-gray-700 mx-4"> {details.title} </h1>
 
-                    <div className="flex mt-2">
+                    <div className="flex mt-1">
                         {details.readyInMinutes && <p className=" text-gray-700 ml-4 mr-2">Ready in: {details.readyInMinutes} minutes</p>}
 
 
@@ -22,21 +22,21 @@ export default function DetailsHead({ details }) {
 
 
 
-                <div className="grid grid-cols-4 gap-4 mx-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-4">
                     {details.glutenFree && (<div className=" gap-1 min-w-20 ">
-                        <img className="min-h-10" src="https://spoonacular.com/application/frontend/images/badges/gluten-free.svg" alt="" />
-                        <span>G-free</span>
+                        <img className=" h-7 lg:h-10" src="https://spoonacular.com/application/frontend/images/badges/gluten-free.svg" alt="" />
+                        <span className="text-sm lg:text-base">G-free</span>
                     </div>)}
 
-                    {details.dairyFree == "true" && (<div>
-                        <img className="min-h-10" src="https://spoonacular.com/application/frontend/images/badges/dairy-free.svg" alt="" />
-                        <span>D-free</span>
+                    {details.dairyFree == "true" && (<div className=" gap-1 min-w-20 ">
+                        <img className="h-7 lg:h-10" src="https://spoonacular.com/application/frontend/images/badges/dairy-free.svg" alt="" />
+                        <span  className="text-sm lg:text-base">D-free</span>
                     </div>)}
 
-                    {details.vegan && (<div> <img className="min-h-10" src="https://spoonacular.com/application/frontend/images/badges/vegan.svg" alt="" /> <span>Vegan</span> </div>)}
-                    {details.vegetarian ? (<div> <img className="min-h-10" src=" https://spoonacular.com/application/frontend/images/badges/vegetarian.svg" alt="" /> <span>Vegetarians</span> </div>) : <div>
-                        <img className="h-10" src="https://spoonacular.com/application/frontend/images/badges/primal.svg" alt="" />
-                        <span>Non-VE</span>
+                    {details.vegan && (<div className=" gap-1 min-w-20 " > <img className="h-7 lg:h-10" src="https://spoonacular.com/application/frontend/images/badges/vegan.svg" alt="" /> <span  className="text-sm lg:text-base">Vegan</span> </div>)}
+                    {details.vegetarian ? (<div className=" gap-1 min-w-20 " > <img className="h-7 lg:h-10" src=" https://spoonacular.com/application/frontend/images/badges/vegetarian.svg" alt="" /> <span  className="text-sm lg:text-base">Vegetarians</span> </div>) : <div className=" gap-1 min-w-20 ">
+                        <img className="h-7 lg:h-10" src="https://spoonacular.com/application/frontend/images/badges/primal.svg" alt="" />
+                        <span  className="text-sm lg:text-base">Non-VE</span>
                     </div>}
 
 

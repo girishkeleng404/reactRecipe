@@ -16,7 +16,7 @@ export default function DetailsPage() {
     const [details, setDetails] = useState([]);
     const { data } = useContext(UserContext);
     const recipesPerPage = 12;
-     
+
 
 
     useEffect(() => {
@@ -46,7 +46,7 @@ export default function DetailsPage() {
     return (
         <div>
             <Header />
-            <div className="w-11/12 lg:w-9/12 bg-slate-50 mx-auto">
+            <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto">
 
                 <div className="grid gap-6 py-6">
                     <DetailsHead details={details} />
@@ -75,10 +75,10 @@ export default function DetailsPage() {
 
 
 
-                <div>
-                    <h2 className="text-3xl text-start mx-6">More Recipes</h2>
+                <div className="mx-2">
+                    <h2 className="text-3xl text-start mx-4">More Recipes</h2>
 
-                  
+
 
                     <Cards data={filteredData} recipesPerPage={recipesPerPage} gridClassName="grid-cols-2 lg:grid-cols-4" />
                 </div>

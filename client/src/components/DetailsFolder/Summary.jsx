@@ -3,9 +3,9 @@ export default function Summary({ details }) {
         <div className="py-6 px-4">
 
             <div
-      className="summary"
-      dangerouslySetInnerHTML={{ __html:details.summary }}
-    />
+                className="summary"
+                dangerouslySetInnerHTML={{ __html: details.summary }}
+            />
 
         </div>
 

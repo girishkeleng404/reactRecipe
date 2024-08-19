@@ -29,7 +29,6 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
 
 
 
-
     return(
         <div>
 

@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import IndexPage from './components/IndexPage';
 import RecipeList from './components/RecipeList';
 import DetailsPage from './components/DetailsPage';
+import Search from './components/Search';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <Route index element={<IndexPage/>} />
     <Route path='/recipeList' element={<RecipeList/>} />
     <Route path='/details/:id' element={<DetailsPage/>} />
+    <Route path='/search' element={<Search/>} />
   </Routes>
   )
 }

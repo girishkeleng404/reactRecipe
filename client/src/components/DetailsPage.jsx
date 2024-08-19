@@ -9,6 +9,7 @@ import Summary from "./DetailsFolder/Summary";
 import DetailsHead from "./DetailsFolder/DetailsHead";
 import { UserContext } from "../UserContex";
 import Cards from "./Cards";
+import Footer from "./Footers/Footer";
 
 export default function DetailsPage() {
 
@@ -89,7 +90,7 @@ export default function DetailsPage() {
 
             </div>
 
-
+<Footer/>
 
         </div>
     )

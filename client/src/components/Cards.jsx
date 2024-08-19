@@ -40,7 +40,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
 
            
 
-<div className={`grid ${gridClassName} mx-auto gap-5 my-8 items-baseline `}>
+<div className={`grid ${gridClassName} mx-auto gap-5 mt-8 items-baseline `}>
 
     {currentRecipes && currentRecipes.length > 0 ? (
         currentRecipes.map((dish, inx) => (
@@ -63,7 +63,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
     )}
 </div>
 
-<div className="flex justify-center gap-4 my-8">
+<div className="flex justify-center gap-4 mt-4 py-4">
     <div>
         <button onClick={handlePreviousPage} disabled={currentPage === 1} >
             

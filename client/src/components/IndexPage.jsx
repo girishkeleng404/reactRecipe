@@ -17,7 +17,7 @@ export default function IndexPage() {
         <div className="h-screen relative overflow-hidden">
             <div>
 
-                <img src={`${img1}`} alt="" className="w-screen absolute z-1" />
+                <img src={`${img1}`} alt="" className="h-screen object-cover lg:w-screen absolute z-1" />
 
             </div>
 
@@ -25,7 +25,7 @@ export default function IndexPage() {
                 <Header/>
             </div>
 
-            <div className=" sticky ">
+            <div className=" absolute bottom-0 ">
 
               <Footer/>
             </div>

@@ -68,7 +68,7 @@ export default function Search() {
 
                     <div>
                         <div className="bg-green-100 py-1 px-4 rounded-lg cursor-pointer   " onClick={filterToggle}>Filter</div>
-                    </div>s
+                    </div>
                 </div>
                 {filter && (
                     <div className="grid grid-cols-3 gap-6">

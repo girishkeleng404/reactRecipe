@@ -19,29 +19,32 @@ export default function IndexPage() {
 
 
 
-        
-        <div className="h-screen relative overflow-hidden font-Roman">
-            <div>
 
-                <img src={`${img1}`} alt="" className="h-screen object-cover lg:w-screen absolute z-1" />
+        <div className="h-screen relative overflow-hidden font-Roman ">
+            <div className="">
+
+                <img src={`${img1}`} alt="" className="h-screen object-cover lg:w-screen absolute z-1 " />
 
             </div>
+            <div className="backdrop-blur-lg h-full lg:backdrop-blur-none">
 
-            <div className="text-blck sticky top-0   ">
-                <Header/>
-            </div>
-            <div className="relative flex items-center justify-around h-3/6  ">
-                <Link to={`/search`} className="text-gray-500 lg:text-gray-800 text-2xl lg:text-4xl ">Whip Up Deliciousness:  Explore, <br /> <span className="text-xl"> Cook, Savor!</span></Link>
-                <p></p>
+
+                <div className="text-blck sticky top-0   ">
+                    <Header />
+                </div>
+                <div className="relative flex items-center justify-around h-3/6  ">
+                    <Link to={`/search`} className="text-gray-900 lg:text-gray-700 text-2xl lg:text-4xl ">Whip Up Deliciousness:  Explore, <br /> <span className="text-xl"> Cook, Savor!</span></Link>
+                    <p></p>
+                </div>
             </div>
 
             <div className=" absolute bottom-0 ">
 
-           <Footer/>
+                <Footer />
             </div>
 
         </div>
-   
+
         // </div>
 
     )

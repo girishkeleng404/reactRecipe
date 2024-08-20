@@ -68,14 +68,14 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
         <button onClick={handlePreviousPage} disabled={currentPage === 1} >
             
           <ArrowBackIosNewIcon/>
-          Prev
+          {/* Prev */}
         </button>
     </div>
     {currentPage} of {totalPages}
     <div>
         <button onClick={handleNextPage} disabled={currentPage === totalPages} >
            
-            Next
+            {/* Next */}
             <ArrowForwardIosIcon/>
         </button>
     </div>

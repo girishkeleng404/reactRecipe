@@ -11,7 +11,7 @@ export default function Footer() {
                         <li><a href="https://github.com/girishkeleng404/reactRecipe" className="hover:underline">GitHub</a></li>
                         <li><a href="#" className="hover:underline">Discord</a></li>
                         {/* <li><a href="#" className="hover:underline">Telegram</a></li> */}
-                        <li><a href="https://spoonacular.com/food-api/docs" className="hover:underline">API Docs</a></li>
+                        <li><a href="https://spoonacular.com/food-api/docs" target='new' className="hover:underline">API Docs</a></li>
                     </ul>
                 </div>
 
@@ -29,10 +29,11 @@ export default function Footer() {
                 <div>
                     <h4 className="font-bold text-white mb-4">Donate</h4>
                     <ul>
-                        <li><a href="#" className="hover:underline">Patreon</a></li>
-                        <li><a href="https://github.com/girishkeleng404" className="hover:underline">GitHub Sponsors</a></li>
-                        <li><a href="#" className="hover:underline">PayPal</a></li>
-                        <li><a href="#" className="hover:underline">Account</a></li>
+                        <li><a href="https://rzp.io/l/GQPBIi3v" target='new' className="hover:underline">Razorpay</a></li>
+                        {/* <li><a href="#" className="hover:underline">Patreon</a></li> */}
+                        <li><a href="https://github.com/girishkeleng404" target='new' className="hover:underline">GitHub Sponsors</a></li>
+
+                        <li><a href="https://rzp.io/l/GQPBIi3v" target='new' className="hover:underline">Account</a></li>
                     </ul>
                 </div>
 
@@ -51,14 +52,14 @@ export default function Footer() {
             <div className="border-t mt-2 pt-2 border-gray-600">
                 <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center px-4">
                     <div className="text-sm py-2 text-gray-500">&copy; {new Date().getFullYear()} Pies, Inc. · Privacy · Terms · Sitemap </div>
-  
-                   
-                   
-                        <div className="col-span-1 md:col-span-4 my-2 ">
-                            <p className="text-gray-500 text-sm">
-                                Data provided by <a href="https://spoonacular.com/food-api" className="underline hover:text-white">spoonacular.com </a>
-                            </p>
-                      
+
+
+
+                    <div className="col-span-1 md:col-span-4 my-2 ">
+                        <p className="text-gray-500 text-sm">
+                            Data provided by <a href="https://spoonacular.com/food-api" className="underline hover:text-white">spoonacular.com </a>
+                        </p>
+
 
                     </div>
                 </div>

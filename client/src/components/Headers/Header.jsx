@@ -21,8 +21,8 @@ export default function Header() {
                             <div className="hidden sm:flex w-48 md:w-96 lg:w-99 border border-gray-600 py-1 px-4 rounded-sm cursor-pointer ">
                                 <p>SEARCH</p>
                             </div>
-                            <div className="flex sm:hidden text-6xl">
-                                <SearchIcon className="text-lg"/>
+                            <div className="flex sm:hidden text-4xl text-gray-700">
+                                <SearchIcon fontSize=""/>
                             </div>
                         </Link>
 

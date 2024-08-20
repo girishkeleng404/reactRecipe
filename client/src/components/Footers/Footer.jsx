@@ -2,7 +2,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen">
+        <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen font-Roman">
             <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
                 <div>
                     <h4 className="font-bold text-white mb-4">pies.com</h4>

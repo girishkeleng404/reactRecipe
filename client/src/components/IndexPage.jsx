@@ -20,7 +20,7 @@ export default function IndexPage() {
 
 
         
-        <div className="h-screen relative overflow-hidden ">
+        <div className="h-screen relative overflow-hidden font-Roman">
             <div>
 
                 <img src={`${img1}`} alt="" className="h-screen object-cover lg:w-screen absolute z-1" />

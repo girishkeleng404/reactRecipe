@@ -8,10 +8,10 @@ export default function Header() {
     console.log(location.pathname)
 
     return (
-        <div className="flex justify-around items-center lg:items-top py-4 ">
+        <div className="flex justify-around items-center lg:items-top py-4 font-Roman ">
 
             <div>
-                <Link to={`/`} className="text-6xl lg:text-8xl text-gray-700"> Pies </Link>
+                <Link to={`/`} className="text-6xl lg:text-8xl text-gray-700 "> Pies </Link>
             </div>
             <div>
 

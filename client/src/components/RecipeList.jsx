@@ -21,8 +21,11 @@ export default function RecipeList() {
     return (
         <div>
             <Header />
+<div className="mb-4">
 
-            <Cards recipesPerPage={recipesPerPage} data={data} gridClassName="grid-cols-2 lg:grid-cols-5" />
+    <Cards recipesPerPage={recipesPerPage} data={data} gridClassName="grid-cols-2 lg:grid-cols-5" />
+</div>
+            
             <Footer/>
 
         </div>

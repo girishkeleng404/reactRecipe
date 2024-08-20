@@ -64,21 +64,21 @@ export default function SearchSm() {
 
 
             <div className="flex justify-center flex-col items-center h-5/6 gap-8 z-10 mt-32">
-                <div className="flex gap-6 w-screen border border-gray-700 ">
-                    <div className="gap-6 w-full ml-8 ">
+                <div className="flex s w-screen border border-gray-500 ">
+                    <div className="gap-8 w-full ml-8 py-1">
 
                         <input
                             type="text"
-                            className=" rounded-md h-10 w-10/12 outline-none text-lg px-4 bg-transparent "
+                            className="py-2 rounded-md h-10 w-10/12 outline-none text-lg px-4 bg-transparent "
                             placeholder="Search for a dish"
                             onChange={(ev) => setInputDish(ev.target.value)}
                             onKeyDown={(ev) => { if (ev.key === "Enter") fetchData() }}
                         />
                     </div>
-                    <div className="lg:hidden text-lg py-1 px-4 rounded-lg cursor-pointer" onClick={fetchData}>Search</div>
+                    <div className="lg:hidden text-lg py-2 px-4 rounded-lg cursor-pointer" onClick={fetchData}>Search</div>
 
                     <div>
-                        <div className=" py-1 px-4 rounded-lg cursor-pointer text-lg  " onClick={filterToggle}>Filter</div>
+                        <div className=" py-2 px-2 lg:px-8 rounded-lg cursor-pointer text-lg  " onClick={filterToggle}>Filter</div>
                     </div>
                 </div>
                 {filter && (

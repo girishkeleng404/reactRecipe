@@ -40,11 +40,11 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
 
            
 
-<div className={`grid ${gridClassName} mx-2 gap-5 mt-8 items-baseline `}>
+<div className={`grid ${gridClassName} mx-3 gap-5 mt-8 items-baseline font-Roman `}>
 
     {currentRecipes && currentRecipes.length > 0 ? (
         currentRecipes.map((dish, inx) => (
-            <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center mb-8 rounded-lg drop-shadow-2xl">
+            <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center mb-8 rounded-lg hover:drop-shadow-2xl transition-all duration-300s ">
                 <div >
 
 
@@ -63,7 +63,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
     )}
 </div>
 
-<div className="flex justify-center gap-4 mt-4 py-4">
+<div className="flex justify-center gap-4 mt-4 py-4 font-Roman">
     <div>
         <button onClick={handlePreviousPage} disabled={currentPage === 1} >
             
@@ -71,7 +71,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
           {/* Prev */}
         </button>
     </div>
-    {currentPage} of {totalPages}
+   <p> {currentPage} of {totalPages}  </p> 
     <div>
         <button onClick={handleNextPage} disabled={currentPage === totalPages} >
            

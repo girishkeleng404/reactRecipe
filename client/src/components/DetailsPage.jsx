@@ -58,7 +58,7 @@ export default function DetailsPage() {
           
             <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto">
 
-                <div className="grid gap-6 py-6">
+                <div className="grid gap-6 py-6 font-Roman">
                     <DetailsHead details={details} />
 
 
@@ -86,7 +86,7 @@ export default function DetailsPage() {
 
 
                 <div className="mx-2">
-                    <h2 className="text-3xl text-start mx-4">More Recipes</h2>
+                    <h2 className="text-3xl text-start mx-4 underline">More Recipes</h2>
 
 
 

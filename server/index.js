@@ -9,10 +9,27 @@ const port = 4000;
 
 env.config();
 
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://pies-client.vercel.app/'
+  ];
+
+// app.use(cors({
+//     origin:'http://localhost:5173',
+//     credentials:true
+// }));
+
 app.use(cors({
-    origin:'http://localhost:5173',
-    credentials:true
-}));
+    origin: function(origin, callback) {
+      // Check if the origin is in the allowedOrigins list or if no origin is provided
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true
+  }));
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));

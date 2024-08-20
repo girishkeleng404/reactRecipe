@@ -24,14 +24,14 @@ export default function DetailsPage() {
         const fetchDetails = async () => {
 
             try {
-                const response = await fetch(`http://localhost:4000/details/${id}`,{
+                const response = await fetch(`https://pies-server.vercel.app/details/${id}`,{
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     },
                 });
                 const data = await response.json();
-                console.log( data);
+                // console.log( data);
                 setDetails( data);
             } catch (error) {
                 console.log(error);
@@ -53,7 +53,10 @@ export default function DetailsPage() {
     return (
         <div className="overflow-x-hidden relative flex flex-col items-center  ">
           
-           
+          <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
+                <Header />
+
+            </div>
              
           
             <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24">

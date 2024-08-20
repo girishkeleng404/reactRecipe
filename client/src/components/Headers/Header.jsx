@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 export default function Header() {
 
     const location = useLocation()
-    console.log(location.pathname)
+    // console.log(location.pathname)
 
     return (
         <div className="flex justify-around items-center lg:items-top py-3 lg:py-1  font-Roman gap-32 md:gap-72 lg:gap-96">

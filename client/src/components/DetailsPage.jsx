@@ -38,9 +38,9 @@ export default function DetailsPage() {
 
             }
         }
-        // if (details.length === 0) {
+        
         fetchDetails();
-        // }
+        
         window.scrollTo(0, 0);
 
     }, [id])
@@ -94,7 +94,9 @@ export default function DetailsPage() {
                 </div>
 
 
-
+<div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquam sint amet ad, libero cumque quidem quaerat asperiores corporis inventore odit nihil repellat? Itaque nihil assumenda adipisci perspiciatis praesentium veritatis architecto? Architecto, repellat?
+</div>
 
 
             </div>

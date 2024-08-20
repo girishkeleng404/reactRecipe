@@ -20,13 +20,16 @@ export default function RecipeList() {
 
     return (
         <div>
-            <Header />
-<div className="mb-4">
+            <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
+                <Header />
 
-    <Cards recipesPerPage={recipesPerPage} data={data} gridClassName="grid-cols-2 lg:grid-cols-5" />
-</div>
-            
-            <Footer/>
+            </div>
+            <div className="mb-4 mt-28">
+
+                <Cards recipesPerPage={recipesPerPage} data={data} gridClassName="grid-cols-2 lg:grid-cols-5" />
+            </div>
+
+            <Footer />
 
         </div>
     )

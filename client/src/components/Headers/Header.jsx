@@ -8,7 +8,7 @@ export default function Header() {
     console.log(location.pathname)
 
     return (
-        <div className="flex justify-around items-center lg:items-top py-4 font-Roman ">
+        <div className="flex justify-around items-center lg:items-top py-3 lg:py-1  font-Roman gap-32 md:gap-72 lg:gap-96">
 
             <div>
                 <Link to={`/`} className="text-6xl lg:text-8xl text-gray-700 "> Pies </Link>

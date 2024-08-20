@@ -51,12 +51,15 @@ export default function DetailsPage() {
     };
 
     return (
-        <div className=" ">
+        <div className="overflow-x-hidden relative flex flex-col items-center  ">
+           <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
+                <Header />   
+            
+           </div>
            
-            <Header />      
              
           
-            <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto">
+            <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24">
 
                 <div className="grid gap-6 py-6 font-Roman">
                     <DetailsHead details={details} />
@@ -85,7 +88,7 @@ export default function DetailsPage() {
 
 
 
-                <div className="mx-2">
+                <div className="mb-4">
                     <h2 className="text-3xl text-start mx-4 underline">More Recipes</h2>
 
 

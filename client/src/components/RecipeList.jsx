@@ -3,6 +3,7 @@ import { UserContext } from "../UserContex"
 import { Link } from "react-router-dom";
 import Header from "./Headers/Header";
 import Cards from "./Cards";
+import Footer from "./Footers/Footer";
 
 export default function RecipeList() {
 
@@ -22,6 +23,7 @@ export default function RecipeList() {
             <Header />
 
             <Cards recipesPerPage={recipesPerPage} data={data} gridClassName="grid-cols-2 lg:grid-cols-5" />
+            <Footer/>
 
         </div>
     )

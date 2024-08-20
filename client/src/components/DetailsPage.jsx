@@ -24,7 +24,7 @@ export default function DetailsPage() {
         const fetchDetails = async () => {
 
             try {
-                const response = await fetch(`https://pies-server.vercel.app/details/${id}`,{
+                const response = await fetch(`http://localhost:4000/details/${id}`,{
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -93,10 +93,7 @@ export default function DetailsPage() {
                     <Cards data={filteredData} recipesPerPage={recipesPerPage} gridClassName="grid-cols-2 lg:grid-cols-4" />
                 </div>
 
-
-<div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquam sint amet ad, libero cumque quidem quaerat asperiores corporis inventore odit nihil repellat? Itaque nihil assumenda adipisci perspiciatis praesentium veritatis architecto? Architecto, repellat?
-</div>
+ 
 
 
             </div>

@@ -24,7 +24,7 @@ export default function SearchSm() {
     const fetchData = async () => {
         console.log(inputDish, cuisine, diet, type, includeIngredients, excludeIngredients);
         try {
-            const response = await fetch("https://pies-server.vercel.app/dishs", {
+            const response = await fetch("http://localhost:4000/dishs", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

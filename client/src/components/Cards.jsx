@@ -40,7 +40,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
 
            
 
-<div className={`grid ${gridClassName} mx-auto gap-5 mt-8 items-baseline `}>
+<div className={`grid ${gridClassName} mx-2 gap-5 mt-8 items-baseline `}>
 
     {currentRecipes && currentRecipes.length > 0 ? (
         currentRecipes.map((dish, inx) => (

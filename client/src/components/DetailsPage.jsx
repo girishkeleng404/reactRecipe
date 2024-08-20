@@ -52,10 +52,7 @@ export default function DetailsPage() {
 
     return (
         <div className="overflow-x-hidden relative flex flex-col items-center  ">
-           <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
-                <Header />   
-            
-           </div>
+          
            
              
           

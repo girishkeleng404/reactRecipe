@@ -45,8 +45,11 @@ export default function DetailsPage() {
     };
 
     return (
-        <div>
-            <Header />
+        <div className=" ">
+           
+            <Header />      
+             
+          
             <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto">
 
                 <div className="grid gap-6 py-6">

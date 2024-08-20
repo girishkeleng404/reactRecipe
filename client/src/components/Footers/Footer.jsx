@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function Footer() {
     return (
         <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen">
-            <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-sm text-center md:text-left">
+            <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
                 <div>
                     <h4 className="font-bold text-white mb-4">pies.com</h4>
                     <ul>
@@ -15,16 +15,16 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                <div>
+                {/* <div>
                     <h4 className="font-bold text-white mb-4">Apps</h4>
                     <ul>
                         <li><a href="#" className="hover:underline">Telegram Bot</a></li>
                         <li><a href="#" className="hover:underline">Chrome Extension</a></li>
                         <li><a href="#" className="hover:underline">Firefox Add-on</a></li>
                         <li><a href="#" className="hover:underline">Edge Add-on</a></li>
-                        {/* <li><a href="#" className="hover:underline">Opera Add-on</a></li> */}
+                        <li><a href="#" className="hover:underline">Opera Add-on</a></li>
                     </ul>
-                </div>
+                </div> */}
 
                 <div>
                     <h4 className="font-bold text-white mb-4">Donate</h4>

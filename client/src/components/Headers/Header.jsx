@@ -22,7 +22,7 @@ export default function Header() {
                                 <p>SEARCH</p>
                             </div>
                             <div className="flex sm:hidden text-6xl">
-                                <SearchIcon />
+                                <SearchIcon className="text-lg"/>
                             </div>
                         </Link>
 

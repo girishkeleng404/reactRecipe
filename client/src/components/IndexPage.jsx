@@ -14,6 +14,11 @@ export default function IndexPage() {
 
 
     return (
+        // <div>
+
+
+
+        
         <div className="h-screen relative overflow-hidden">
             <div>
 
@@ -27,12 +32,12 @@ export default function IndexPage() {
 
             <div className=" absolute bottom-0 ">
 
-              <Footer/>
+           <Footer/>
             </div>
 
         </div>
-
-
+   
+        // </div>
 
     )
 }

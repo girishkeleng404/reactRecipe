@@ -36,7 +36,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 
-app.get('/',async (req,res)=>{
+app.use('/',async (req,res)=>{
     res.send('Hello World');
 })
  

@@ -7,12 +7,13 @@ import { Fade, Flip, Hinge, JackInTheBox, Roll, Slide, Zoom } from "react-awesom
 export default function Search() {
 
     const [listData, setListData] = useState([]);
+    // http://localhost:4000/random
 
     useEffect(() => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:4000/random", {
+                const response = await fetch("https://pies-server-cjjttj2h6-girish-kelengs-projects.vercel.app/random", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"

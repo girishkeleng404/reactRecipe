@@ -24,9 +24,15 @@ export default function DetailsPage() {
         const fetchDetails = async () => {
 
             try {
-                const response = await axios.post('/details/' + id);
-                console.log(response.data);
-                setDetails(response.data);
+                const response = await fetch(`https://pies-server.vercel.app/details/${id}`,{
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                });
+                const data = await response.json();
+                console.log( data);
+                setDetails( data);
             } catch (error) {
                 console.log(error);
 

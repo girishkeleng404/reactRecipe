@@ -11,7 +11,8 @@ env.config();
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://pies-client.vercel.app/'
+    'https://pies-client.vercel.app/',
+    'https://pies-client-a8g9byi84-girish-kelengs-projects.vercel.app/'
   ];
 
 // app.use(cors({

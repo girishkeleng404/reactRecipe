@@ -26,15 +26,29 @@ export default function DetailsPage() {
         const fetchDetails = async () => {
 
             try {
+<<<<<<< HEAD
                 
+=======
+
+                const response = await fetch(`https://pies-server.vercel.app/details/${id}`,{
+ 
+>>>>>>> f332be3819c973921820537f487d70143c2b7eb3
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     },
                 });
                 const data = await response.json();
+<<<<<<< HEAD
                 
                 setDetails( data);
+=======
+
+
+                // console.log( data);
+                setDetails( data);
+ 
+>>>>>>> f332be3819c973921820537f487d70143c2b7eb3
             } catch (error) {
                 console.log(error);
 
@@ -54,10 +68,23 @@ export default function DetailsPage() {
 
     return (
         <div className="overflow-x-hidden relative flex flex-col items-center  ">
+<<<<<<< HEAD
           
            
              
           
+=======
+
+
+
+          <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
+                <Header />
+
+            </div>
+             
+          
+ 
+>>>>>>> f332be3819c973921820537f487d70143c2b7eb3
             <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24">
 
                 <div className="grid gap-6 py-6 font-Roman">

@@ -7,6 +7,7 @@ import IndexPage from './components/IndexPage';
 import RecipeList from './components/RecipeList';
 import DetailsPage from './components/DetailsPage';
 import Search from './components/Search';
+import FAQ from './components/Footers/FAQ';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     <Route path='/recipeList' element={<RecipeList/>} />
     <Route path='/details/:id' element={<DetailsPage/>} />
     <Route path='/search' element={<Search/>} />
+    <Route path='/faq' element={<FAQ/>} />
   </Routes>
   )
 }

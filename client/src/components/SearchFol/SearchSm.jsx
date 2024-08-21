@@ -19,12 +19,12 @@ export default function SearchSm() {
     const [includeIngredients, setIncludeIngredients] = useState("");
     const [excludeIngredients, setExcludeIngredients] = useState("");
     const [filter, setFilter] = useState(false);
-    // const [dishsList, setDishsList] = useState([]);
+    
 
     const fetchData = async () => {
-        console.log(inputDish, cuisine, diet, type, includeIngredients, excludeIngredients);
+        // console.log(inputDish, cuisine, diet, type, includeIngredients, excludeIngredients);
         try {
-            const response = await fetch("http://localhost:4000/dishs", {
+            const response = await fetch("https://pies-server.vercel.app/dishs", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -39,8 +39,8 @@ export default function SearchSm() {
                 }),
             })
             const data = await response.json();
-            console.log(data);
-            // setDishsList(data);
+           
+           
             setData(data);
             navigate("/recipeList");
 

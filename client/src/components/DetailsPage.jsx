@@ -10,6 +10,8 @@ import DetailsHead from "./DetailsFolder/DetailsHead";
 import { UserContext } from "../UserContex";
 import Cards from "./Cards";
 import Footer from "./Footers/Footer";
+import { Fade } from "react-awesome-reveal";
+
 
 export default function DetailsPage() {
 
@@ -17,30 +19,30 @@ export default function DetailsPage() {
     const [details, setDetails] = useState([]);
     const { data } = useContext(UserContext);
     const recipesPerPage = 12;
-
+    const y = document.documentElement.scrollHeight / 2;
 
 
     useEffect(() => {
         const fetchDetails = async () => {
 
             try {
-                const response = await fetch(`http://localhost:4000/details/${id}`,{
+                const response = await fetch(`http://localhost:4000/details/${id}`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     },
                 });
                 const data = await response.json();
-                console.log( data);
-                setDetails( data);
+                console.log(data);
+                setDetails(data);
             } catch (error) {
                 console.log(error);
 
             }
         }
-        
+
         fetchDetails();
-        
+
         window.scrollTo(0, 0);
 
     }, [id])
@@ -52,22 +54,25 @@ export default function DetailsPage() {
 
     return (
         <div className="overflow-x-hidden relative flex flex-col items-center  ">
-          
-           
-             
-          
+
+            <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
+                <Header />
+
+            </div>
+
+
             <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24">
 
                 <div className="grid gap-6 py-6 font-Roman">
                     <DetailsHead details={details} />
 
-
+         <Fade> 
                     <div className="grid lg:grid-cols-[3fr_2fr] gap-12  bg-white/80 rounded-3xl  p-6 drop-shadow-2xl">
 
                         <div className=" h-min grid">
-
-                            <img className="w-full object-cover rounded-3xl" src={details.image} alt={details.title} />
-
+                          
+                                <img className="w-full object-cover rounded-3xl" src={details.image} alt={details.title} />
+                             
                             <Highlights details={details} />
 
                         </div>
@@ -75,7 +80,7 @@ export default function DetailsPage() {
                         <Ingredients details={details} />
 
                     </div>
-
+                    </Fade>
 
                     <Steps details={details} />
                     <Summary details={details} />
@@ -90,15 +95,15 @@ export default function DetailsPage() {
 
 
 
-                    <Cards data={filteredData} recipesPerPage={recipesPerPage} gridClassName="grid-cols-2 lg:grid-cols-4" />
+                    <Cards data={filteredData} recipesPerPage={recipesPerPage} gridClassName="grid-cols-2 lg:grid-cols-4" x={0} y={y} />
                 </div>
 
- 
+
 
 
             </div>
 
-<Footer/>
+            <Footer />
 
         </div>
     )

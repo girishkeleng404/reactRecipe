@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen font-Roman">
             <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
                 <div>
-                    <h4 className="font-bold text-white mb-4">pies.com</h4>
+                    <Link to={`/`} className="font-bold text-white mb-4">pies.com</Link>
                     <ul>
                         <li><a href="#" className="hover:underline">News</a></li>
                         <li><a href="https://github.com/girishkeleng404/reactRecipe" className="hover:underline">GitHub</a></li>

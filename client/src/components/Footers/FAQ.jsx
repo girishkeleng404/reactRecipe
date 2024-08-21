@@ -4,26 +4,44 @@ export default function FAQ() {
 
 
     return (
-        <div>
-            <div className="flex flex-col w-8/12 mx-auto items-center my-10">
-                <h1 className="text-3xl">FAQ</h1>
+        <div className="overflow-hidden">
+            <div className="flex flex-col w-10/12 md:w-8/12 lg:w-7/12 mx-auto items-center my-10 text-gray-700">
+                <h1 className="text-3xl mb-8">FAQ</h1>
+
+
+
+
                 <div className="flex flex-col justify-center items-start w-full gap-8">
                     <div >
-                        <p className="text-2xl">Where does your cost data come from?</p>
+                        <p className=" text-xl lg:text-2xl  underline"> Is it free to use?</p>
+                        <p>
+                            Yes, our service is completely free to use! You can search for recipes, input your ingredients, and find meals you can make without any cost.
+
+                        </p>
+                    </div>
+                    <div >
+                        <p className="text-xl lg:text-2xl underline">Where does your cost data come from?</p>
                         <p>
                             Currently it is an estimated price based on average costs of aggregated supermarket data. Since grocery prices do range (sometimes considerably) from region to region and store to store, we hope to have prices based on user location or an option to enter your own prices in the future.
 
                         </p>
                     </div>
                     <div>
-                        <p className="text-2xl">How are the different diets defined?</p>
+                        <p className="text-xl lg:text-2xl underline">How are the different diets defined?</p>
                         <p>
-                            Gluten Free: Eliminating gluten means avoiding wheat, barley, rye, and other gluten-containing grains and foods made from them (or that may have been cross contaminated).
-                            Ketogenic: The keto diet is based more on the ratio of fat, protein, and carbs in the diet rather than specific ingredients. Generally speaking, high fat, protein-rich foods are acceptable and high carbohydrate foods are not.
-                            Vegetarian: No ingredients may contain meat or meat by-products, such as bones or gelatin.
-                            Lacto-Vegetarian: All ingredients must be vegetarian and none of the ingredients can be or contain egg.
-                            Ovo-Vegetarian: All ingredients must be vegetarian and none of the ingredients can be or contain dairy.
-                            Vegan: No ingredients may contain meat or meat by-products, such as bones or gelatin, nor may they contain eggs, dairy, or honey.
+                           <span className="font-semibold">Gluten Free: </span>  Eliminating gluten means avoiding wheat, barley, rye, and other gluten-containing grains and foods made from them (or that may have been cross contaminated). <br />
+                           <span className="font-semibold">Ketogenic: </span>
+                             The keto diet is based more on the ratio of fat, protein, and carbs in the diet rather than specific ingredients. Generally speaking, high fat, protein-rich foods are acceptable and high carbohydrate foods are not. <br />
+
+                             <span className="font-semibold"> Vegetarian: </span>
+                            No ingredients may contain meat or meat by-products, such as bones or gelatin. <br />
+                            <span className="font-semibold">Lacto-Vegetarian: </span>
+                             All ingredients must be vegetarian and none of the ingredients can be or contain egg.
+                             <br />
+                             <span className="font-semibold"> Ovo-Vegetarian:  </span> 
+                           All ingredients must be vegetarian and none of the ingredients can be or contain dairy. <br />
+                           <span className="font-semibold">  Vegan:</span> 
+                            No ingredients may contain meat or meat by-products, such as bones or gelatin, nor may they contain eggs, dairy, or honey.
                             Pescetarian: Everything is allowed except meat and meat by-products - some pescetarians eat eggs and dairy, some do not.
                             Paleo: Allowed ingredients include meat (especially grass fed), fish, eggs, vegetables, some oils (e.g. coconut and olive oil), and in smaller quantities, fruit, nuts, and sweet potatoes. We also allow honey and maple syrup (popular in Paleo desserts, but strict Paleo followers may disagree). Ingredients not allowed include legumes (e.g. beans and lentils), grains, dairy, refined sugar, and processed foods.
                             Primal: Very similar to Paleo, except dairy is allowed - think raw and full fat milk, butter, ghee, etc.
@@ -33,13 +51,13 @@ export default function FAQ() {
 
                     </div>
                     <div>
-                        <p className="text-2xl">I want to make a "What's in my fridge?". How do I do this?</p>
+                        <p className="text-xl lg:text-2xl underline">I want to make a "What's in my fridge?". How do I do this?</p>
                         <p>
-                        Yes, you can! Simply enter the ingredients you have in your fridge into our search feature, and we'll show you recipes that you can make with those ingredients. Our smart recipe finder matches your available ingredients with delicious recipes, helping you make the most of what you already have.
+                            Yes, you can! Simply enter the ingredients you have in your fridge into our search feature, and we'll show you recipes that you can make with those ingredients. Our smart recipe finder matches your available ingredients with delicious recipes, helping you make the most of what you already have.
                         </p>
                     </div>
                     <div>
-                        <p className="text-2xl"> How can I search recipes by the equipment used?</p>
+                        <p className="text-xl lg:text-2xl underline"> How can I search recipes by the equipment used?</p>
                         <p>  Yes, you can! Simply select the equipment you have, such as a blender, oven, or slow cooker, and we'll show you recipes that specifically use those tools. This way, you can easily find recipes that match the equipment you have at home</p>
                     </div>
 
@@ -48,7 +66,7 @@ export default function FAQ() {
 
 
             </div>
-            <Footer/>
+            <Footer />
 
         </div>
     );

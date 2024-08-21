@@ -4,7 +4,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
-export default function Cards({recipesPerPage, data, gridClassName}) {
+export default function Cards({recipesPerPage, data, gridClassName,x,y}) {
     const [currentPage, setCurrentPage] = useState(1);
     const indexOfLastRecipe = currentPage * recipesPerPage;
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
@@ -19,6 +19,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
         if (currentPage < totalPages) {
             setCurrentPage(currentPage + 1)
         }
+        window.scrollTo(x, y);
     }
 
 
@@ -29,6 +30,7 @@ export default function Cards({recipesPerPage, data, gridClassName}) {
                 // (prev)=> prev -1
             )
         }
+        window.scrollTo(x, y);
     }
 
 

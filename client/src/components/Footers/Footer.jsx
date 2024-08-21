@@ -1,11 +1,12 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
         <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen font-Roman">
             <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
                 <div>
-                    <h4 className="font-bold text-white mb-4">pies.com</h4>
+                    <Link to={`/`} className="font-bold text-white mb-4">pies.com</Link>
                     <ul>
                         <li><a href="#" className="hover:underline">News</a></li>
                         <li><a href="https://github.com/girishkeleng404/reactRecipe" className="hover:underline">GitHub</a></li>
@@ -40,7 +41,7 @@ export default function Footer() {
                 <div>
                     <h4 className="font-bold text-white mb-4">Help</h4>
                     <ul>
-                        <li><a href="#" className="hover:underline">FAQ</a></li>
+                        <li><Link to={`/faq`} className="hover:underline">FAQ</Link></li>
                         <li><a href="#" className="hover:underline">About</a></li>
                         <li><a href="#" className="hover:underline">Terms & Privacy</a></li>
                         <li><a href="#" className="hover:underline">Contact</a></li>

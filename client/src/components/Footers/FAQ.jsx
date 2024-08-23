@@ -4,8 +4,8 @@ export default function FAQ() {
 
 
     return (
-        <div className="overflow-hidden">
-            <div className="flex flex-col w-10/12 md:w-8/12 lg:w-7/12 mx-auto items-center my-10 text-gray-700">
+        <div className="overflow-hidden dark:bg-neutral-900 ">
+            <div className="flex flex-col w-10/12 md:w-8/12 lg:w-7/12 mx-auto items-center my-10 text-gray-700 dark:text-gray-200 pb-12">
                 <h1 className="text-3xl mb-8">FAQ</h1>
 
 

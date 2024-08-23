@@ -7,7 +7,7 @@ export default function Ingredients({ details }) {
                 {details.nutrition && details.nutrition.ingredients && details.nutrition.ingredients.map((ingredient, inx) => (
                 <div key={inx} className="my-3">
                     <p className="capitalize">
-                        <span className="font-semibold text-lg">{ingredient.amount} </span> <span className="text-md">{ingredient.unit} {ingredient.name}</span> 
+                        <span className="font-semibold text-lg dark:text-gray-300">{ingredient.amount} </span> <span className="text-md dark:text-gray-300">{ingredient.unit} {ingredient.name}</span> 
                     </p>
                 </div>
             ))}

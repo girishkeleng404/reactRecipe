@@ -7,7 +7,7 @@ export default function Steps({details}){
 
                 {details.analyzedInstructions && details.analyzedInstructions[0].steps && details.analyzedInstructions[0].steps.map((step, inx) => (
                 <div key={inx} className="py-1">
-                    <p className="capitalize">
+                    <p className="capitalize dark:text-gray-300">
                         <span className="font-semibold text-lg">{step.number}. </span> <span className="text-md">{step.step}</span> 
                     </p>
                 </div>

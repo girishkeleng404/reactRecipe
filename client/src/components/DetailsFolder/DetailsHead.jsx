@@ -3,10 +3,10 @@ export default function DetailsHead({ details }) {
         <div>
             <div className="grid grid-cols-[5fr_2fr] items-center">
                 <div>
-                    <h1 className="text-3xl lg:text-5xl text-gray-700 mx-4"> {details.title} </h1>
+                    <h1 className="text-3xl lg:text-5xl text-gray-700 mx-4 dark:text-gray-300"> {details.title} </h1>
 
                     <div className="flex mt-1">
-                        {details.readyInMinutes && <p className=" text-gray-700 ml-4 mr-2">Ready in: {details.readyInMinutes}
+                        {details.readyInMinutes && <p className=" text-gray-700 ml-4 mr-2 dark:text-gray-400" >Ready in: {details.readyInMinutes}
                              minutes
                             </p>}
 

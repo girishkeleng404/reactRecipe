@@ -22,6 +22,9 @@ export default function DetailsPage() {
     const y = document.documentElement.scrollHeight / 2;
 
 
+    
+
+
     useEffect(() => {
         const fetchDetails = async () => {
 
@@ -36,6 +39,7 @@ export default function DetailsPage() {
                     },
                 });
                 const data = await response.json();
+               
  
  
                 setDetails(data);
@@ -58,28 +62,21 @@ export default function DetailsPage() {
     };
 
     return (
-        <div className="overflow-x-hidden relative flex flex-col items-center  ">
- 
-          
-          
-             
-          
- 
+        <div className="overflow-x-hidden relative flex flex-col items-center dark:bg-neutral-900 dark:text-gray-100 ">
 
-            <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
+            <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl dark:bg-neutral-900 dark:bg-opacity-50">
                 <Header />
 
             </div>
 
 
- 
-            <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24">
+            <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24 dark:bg-neutral-900">
 
-                <div className="grid gap-6 py-6 font-Roman">
+                <div className="grid gap-6 py-6 font-Roman lg:pt-12">
                     <DetailsHead details={details} />
 
          <Fade> 
-                    <div className="grid lg:grid-cols-[3fr_2fr] gap-12  bg-white/80 rounded-3xl  p-6 drop-shadow-2xl">
+                    <div className="grid lg:grid-cols-[3fr_2fr] gap-12  bg-white/80 rounded-3xl  p-6 drop-shadow-2xl dark:bg-neutral-900 ">
 
                         <div className=" h-min grid">
                           

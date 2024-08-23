@@ -23,10 +23,10 @@ export default function IndexPage() {
         <div className="h-screen relative overflow-hidden font-Roman ">
             <div className="">
 
-                <img src={`${img1}`} alt="" className="h-screen object-cover lg:w-screen absolute z-1 " />
+                <img src={`${img1}`} alt="" className="h-screen object-cover lg:w-screen absolute z-1 filter dark:brightness-75" />
 
             </div>
-            <div className="backdrop-blur-lg h-full lg:backdrop-blur-none">
+            <div className="backdrop-blur-lg h-full lg:backdrop-blur-none dark:backdrop-blur-xl ">
 
 
                 <div className="text-blck sticky top-0   ">

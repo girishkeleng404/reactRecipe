@@ -17,22 +17,37 @@ export default function Cards({recipesPerPage, data, gridClassName,x,y}) {
 
     function handleNextPage() {
         if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1)
+
+            // setCurrentPage(currentPage + 1)
+            setCurrentPage(prev => {
+                const newPage = prev + 1;
+                 
+                window.scrollTo({
+                    top: y,   
+                    left: x,  
+                    behavior: 'smooth'
+                });
+                return newPage;
+            });
         }
-        window.scrollTo(x, y);
+        
     }
 
-
+ 
     const handlePreviousPage = async () => {
         if (currentPage > 1) {
-            setCurrentPage(
-                currentPage - 1
-                // (prev)=> prev -1
-            )
+            setCurrentPage(prev => {
+                const newPage = prev - 1;
+               
+                window.scrollTo({
+                    top: y,   
+                    left: x,  
+                    behavior: 'smooth'
+                });
+                return newPage;
+            });
         }
-        window.scrollTo(x, y);
     }
-
 
 
     return(

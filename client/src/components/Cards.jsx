@@ -55,7 +55,7 @@ export default function Cards({recipesPerPage, data, gridClassName,x,y}) {
                         alt={dish.title}
                         className="w-full h-60 object-cover rounded-lg "
                     />
-                    <h3 className="recipe-title text-lg">{dish.title}</h3>
+                    <h3 className="recipe-title text-lg dark:text-gray-300">{dish.title}</h3>
                 </div>
 
             </Link>
@@ -65,7 +65,7 @@ export default function Cards({recipesPerPage, data, gridClassName,x,y}) {
     )}
 </div>
 
-<div className="flex justify-center gap-4 mt-4 py-4 font-Roman">
+<div className="flex justify-center gap-4 mt-4 py-4 font-Roman dark:text-gray-300">
     <div>
         <button onClick={handlePreviousPage} disabled={currentPage === 1} >
             

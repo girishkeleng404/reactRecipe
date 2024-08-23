@@ -35,9 +35,9 @@ export default function Search() {
 
 
     return (
-        <div className="relative h-full  overflow-x-hidden font-Roman">
+        <div className="relative h-full  overflow-x-hidden font-Roman dark:bg-neutral-900">
             {/* Use fixed positioning for the header */}
-            <div className="fixed top-0 left-0 w-full bg-white z-10 shadow-md bg-opacity-60 backdrop-blur-2xl drop-shadow-xl">
+            <div className="fixed top-0 left-0 w-full bg-white z-10 shadow-md bg-opacity-60 backdrop-blur-2xl drop-shadow-xl dark:bg-neutral-900 dark:bg-opacity-50">
                 <Header />
                 <Fade>
                     <SearchSm />

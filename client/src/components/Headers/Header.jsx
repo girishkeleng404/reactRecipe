@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 import SearchIcon from '@mui/icons-material/Search';
+import ThemeToggle from "../ThemeToggle";
 
 export default function Header() {
 
@@ -28,6 +29,7 @@ export default function Header() {
 
                         <div>
                             {/* Optional About Section */}
+                            <ThemeToggle/>
                         </div>
                     </div>
                 )}

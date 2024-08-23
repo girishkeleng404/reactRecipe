@@ -22,6 +22,9 @@ export default function DetailsPage() {
     const y = document.documentElement.scrollHeight / 2;
 
 
+    
+
+
     useEffect(() => {
         const fetchDetails = async () => {
 
@@ -33,7 +36,7 @@ export default function DetailsPage() {
                     },
                 });
                 const data = await response.json();
-                console.log(data);
+               
                 setDetails(data);
             } catch (error) {
                 console.log(error);
@@ -53,15 +56,15 @@ export default function DetailsPage() {
     };
 
     return (
-        <div className="overflow-x-hidden relative flex flex-col items-center  ">
+        <div className="overflow-x-hidden relative flex flex-col items-center dark:bg-zinc-900 dark:text-gray-100 ">
 
-            <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl">
+            <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl dark:bg-zinc-900 ">
                 <Header />
 
             </div>
 
 
-            <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24">
+            <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24 dark:bg-zinc-900">
 
                 <div className="grid gap-6 py-6 font-Roman">
                     <DetailsHead details={details} />

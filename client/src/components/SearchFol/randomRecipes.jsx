@@ -13,7 +13,7 @@ export default function RandomRecipes({ recipes }) {
 
 
                     <img src={`${dish.image}`} alt="" className="rounded-xl"/>
-                   <p className="text-lg lg:text-xl"> {dish.title} </p> 
+                   <p className="text-lg lg:text-xl dark:text-gray-200"> {dish.title} </p> 
 
                      </Link>
             ))}

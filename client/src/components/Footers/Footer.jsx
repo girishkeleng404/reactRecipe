@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen font-Roman">
-            <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
-                <div>
+        <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen font-Roman ">
+            <div className="container mx-auto grid grid-cols-3 gap-8 text-sm text-start pl-8 lg:pl-36 px-2">
+                <div className=''>
                     <Link to={`/`} className="font-bold text-white mb-4">pies.com</Link>
-                    <ul>
+                    <ul className='mt-4'>
                         <li><a href="#" className="hover:underline">News</a></li>
                         <li><a href="https://github.com/girishkeleng404/reactRecipe" className="hover:underline">GitHub</a></li>
                         <li><a href="#" className="hover:underline">Discord</a></li>
-                        {/* <li><a href="#" className="hover:underline">Telegram</a></li> */}
+                         
                         <li><a href="https://spoonacular.com/food-api/docs" target='new' className="hover:underline">API Docs</a></li>
                     </ul>
                 </div>
@@ -58,7 +58,7 @@ export default function Footer() {
 
                     <div className="col-span-1 md:col-span-4 my-2 ">
                         <p className="text-gray-500 text-sm">
-                            Data provided by <a href="https://spoonacular.com/food-api" className="underline hover:text-white">spoonacular.com </a>
+                            Data provided by <a href="https://spoonacular.com/food-api" target='new' className="underline hover:text-white">spoonacular.com </a>
                         </p>
 
 

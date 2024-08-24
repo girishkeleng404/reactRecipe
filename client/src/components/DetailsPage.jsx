@@ -29,7 +29,7 @@ export default function DetailsPage() {
         const fetchDetails = async () => {
 
             try {
-                const response = await fetch(`http://localhost:4000/details/${id}`, {
+                const response = await fetch(`https://pies-server.vercel.app/details/${id}`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

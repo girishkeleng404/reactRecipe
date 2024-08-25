@@ -62,7 +62,7 @@ export default function Cards({recipesPerPage, data, gridClassName,x,y}) {
     {currentRecipes && currentRecipes.length > 0 ? (
         currentRecipes.map((dish, inx) => (
             <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center mb-8 rounded-lg hover:drop-shadow-2xl transition-all duration-300s ">
-                <div >
+                <div className="">
 
 
                     <img
@@ -70,7 +70,7 @@ export default function Cards({recipesPerPage, data, gridClassName,x,y}) {
                         alt={dish.title}
                         className="w-full h-60 object-cover rounded-lg "
                     />
-                    <h3 className="recipe-title text-lg dark:text-gray-300">{dish.title}</h3>
+                    <h3 className="recipe-title text-base lg:text-lg dark:text-gray-300 pt-1">{dish.title}</h3>
                 </div>
 
             </Link>

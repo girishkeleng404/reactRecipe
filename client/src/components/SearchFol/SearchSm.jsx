@@ -75,32 +75,32 @@ export default function SearchSm() {
                             onKeyDown={(ev) => { if (ev.key === "Enter") fetchData() }}
                         />
                     </div>
-                    <div className="lg:hidden text-lg py-2 px-4 rounded-lg cursor-pointer dark:text-gray-300 " onClick={fetchData}>Search</div>
+                    <div className=" text-lg py-2 px-4 rounded-lg cursor-pointer dark:text-gray-300 " onClick={fetchData}>Search</div>
 
                     <div>
                         <div className=" py-2 px-2 lg:px-8 rounded-lg cursor-pointer text-lg  dark:text-gray-300" onClick={filterToggle}>Filter</div>
                     </div>
                 </div>
                 {filter && (
-                    <div className=" grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mx-2">
+                    <div className=" grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mx-2 dark:text-gray-200 mb-4">
 
 
                         <label className="gap-4 flex justify-between items-baseline" htmlFor="">Cuisine :
-                            <input onChange={(ev) => setCuisine(ev.target.value)} type="text" placeholder="italian" className="border border-gray-400 outline-none px-1 rounded-md h-8 ml-2 " />
+                            <input onChange={(ev) => setCuisine(ev.target.value)} type="text" placeholder="italian" className="border border-gray-700 outline-none px-1 rounded-md h-8 ml-2 bg-inherit" />
                         </label>
 
 
                         <label className="gap-4 flex justify-between items-baseline" htmlFor="">Diet :
-                            <input onChange={(ev) => setDiet(ev.target.value)} type="text" placeholder="vegetarian" className="border border-gray-400 outline-none px-1 rounded-md h-8 ml-2 " />
+                            <input onChange={(ev) => setDiet(ev.target.value)} type="text" placeholder="vegetarian" className="border border-gray-700 outline-none px-1 rounded-md h-8 ml-2 bg-inherit" />
                         </label>
                         <label className="gap-4 flex justify-between items-baseline" htmlFor="">Type :
-                            <input onChange={(ev) => setType(ev.target.value)} type="text" placeholder="main course" className="border border-gray-400 outline-none px-1 rounded-md h-8 ml-2 " />
+                            <input onChange={(ev) => setType(ev.target.value)} type="text" placeholder="main course" className="border border-gray-700 outline-none px-1 rounded-md h-8 ml-2 bg-inherit " />
                         </label>
                         <label onChange={(ev) => setIncludeIngredients(ev.target.value)} className="gap-4 flex justify-between items-baseline" htmlFor="">Include Ingredients  :
-                            <input type="text" className="border border-gray-400 outline-none px-1 rounded-md h-8 ml-2 " />
+                            <input type="text" className="border border-gray-700 outline-none px-1 rounded-md h-8 ml-2 bg-inherit " />
                         </label>
                         <label onChange={(ev) => setExcludeIngredients(ev.target.value)} className="gap-4 flex justify-between items-baseline" htmlFor="">Exclude Ingredients :
-                            <input type="text" className="border border-gray-400 outline-none px-1 rounded-md h-8 ml-2 " />
+                            <input type="text" className="border border-gray-700 outline-none px-1 rounded-md h-8 ml-2 bg-inherit" />
                         </label>
                         <div className="flex justify-end items-center">
                             <div

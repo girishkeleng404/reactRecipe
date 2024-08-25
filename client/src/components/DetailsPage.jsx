@@ -66,7 +66,7 @@ export default function DetailsPage() {
 
             <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24 dark:bg-neutral-900">
 
-                <div className="grid gap-6 py-6 font-Roman lg:pt-12">
+                <div className="grid gap-6 py-6 font-serif lg:pt-12">
                     <DetailsHead details={details} />
 
          <Fade> 

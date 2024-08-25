@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen font-Roman ">
+        <footer className="bg-gray-900/95 backdrop-blur-lg text-gray-400 py-2 w-screen font-serif ">
             <div className="container mx-auto grid grid-cols-3 gap-8 text-sm text-start pl-8 lg:pl-36 px-2">
                 <div className=''>
                     <Link to={`/`} className="font-bold text-white mb-4">pies.com</Link>

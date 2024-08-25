@@ -16,7 +16,8 @@ export default {
         'mono': ['ui-monospace', 'SFMono-Regular'],
         'display': ['Oswald'],
         'body': ['"Open Sans"'],
-        'Roman': ['Luxurious Roman', 'serif']
+        'Roman': ['Luxurious Roman', 'serif'],
+        'Dancing': ['Dancing Script', 'cursive']
       }
     },
   },

@@ -63,9 +63,9 @@ export default function SearchSm() {
 
 
 
-            <div className="flex justify-center flex-col items-center h-5/6 gap-8 z-10 mt-32">
-                <div className="flex s w-screen border border-gray-500 dark:border-none ">
-                    <div className="gap-8 w-full ml-8 py-1">
+            <div className="flex justify-center flex-col items-center h-5/6 gap-8 z-10 mt-20">
+                <div className="flex  w-screen border border-gray-500 dark:border-none ">
+                    <div className="gap-8 w-full ml-8 py-1 lg:py-2">
 
                         <input
                             type="text"

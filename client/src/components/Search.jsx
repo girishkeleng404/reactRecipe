@@ -45,7 +45,7 @@ export default function Search() {
             </div>
 
            
-            <div className="pt-96 mx-3 lg:mx-4 overflow-x-hidden w-auto">
+            <div className="pt-80 mx-3 lg:mx-4 overflow-x-hidden w-auto">
                 <RandomRecipes recipes={listData} />
             </div>
         </div>

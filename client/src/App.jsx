@@ -8,6 +8,7 @@ import RecipeList from './components/RecipeList';
 import DetailsPage from './components/DetailsPage';
 import Search from './components/Search';
 import FAQ from './components/Footers/FAQ';
+import TnP from './components/Footers/T&P';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
     <Route path='/details/:id' element={<DetailsPage/>} />
     <Route path='/search' element={<Search/>} />
     <Route path='/faq' element={<FAQ/>} />
+    <Route path='/t&p' element={<TnP/>}/>
   </Routes>
   )
 }

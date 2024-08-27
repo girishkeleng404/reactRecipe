@@ -43,7 +43,7 @@ export default function Footer() {
                     <ul>
                         <li><Link to={`/faq`} className="hover:underline">FAQ</Link></li>
                         <li><a href="#" className="hover:underline">About</a></li>
-                        <li><a href="#" className="hover:underline">Terms & Privacy</a></li>
+                        <li><Link to={`/t&p`} className="hover:underline">Terms & Privacy</Link></li>
                         <li><a href="#" className="hover:underline">Contact</a></li>
                         {/* <li><a href="#" className="hover:underline">System Status</a></li> */}
                     </ul>

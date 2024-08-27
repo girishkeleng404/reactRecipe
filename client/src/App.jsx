@@ -10,6 +10,7 @@ import Search from './components/Search';
 import FAQ from './components/Footers/FAQ';
 import TnP from './components/Footers/T&P';
 import ContactFun from './components/Footers/Contact';
+import AboutFun from './components/Footers/About';
  
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <Route path='/search' element={<Search/>} />
     <Route path='/faq' element={<FAQ/>} />
     <Route path='/t&p' element={<TnP/>}/>
+    <Route path='/about' element={<AboutFun/>}/>
     <Route path='/contact' element={<ContactFun/>}/>
    
   </Routes>

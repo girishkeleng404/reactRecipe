@@ -42,9 +42,9 @@ export default function Footer() {
                     <h4 className="font-bold text-white mb-4">Help</h4>
                     <ul>
                         <li><Link to={`/faq`} className="hover:underline">FAQ</Link></li>
-                        <li><a href="#" className="hover:underline">About</a></li>
+                        <li><Link to={`/about`} className="hover:underline">About</Link></li>
                         <li><Link to={`/t&p`} className="hover:underline">Terms & Privacy</Link></li>
-                        <li><a href="#" className="hover:underline">Contact</a></li>
+                        <li><Link to={`/contact`} className="hover:underline">Contact</Link></li>
                         {/* <li><a href="#" className="hover:underline">System Status</a></li> */}
                     </ul>
                 </div>

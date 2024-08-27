@@ -8,9 +8,9 @@ export default function Footer() {
                 <div className=''>
                     <Link to={`/`} className="font-bold text-white mb-4">pies.com</Link>
                     <ul className='mt-4'>
-                        <li><a href="#" className="hover:underline">News</a></li>
+                        {/* <li><a href="#" className="hover:underline">News</a></li> */}
                         <li><a href="https://github.com/girishkeleng404/reactRecipe" className="hover:underline">GitHub</a></li>
-                        <li><a href="#" className="hover:underline">Discord</a></li>
+                        {/* <li><a href="#" className="hover:underline">Discord</a></li> */}
                          
                         <li><a href="https://spoonacular.com/food-api/docs" target='new' className="hover:underline">API Docs</a></li>
                     </ul>

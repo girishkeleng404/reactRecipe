@@ -14,21 +14,21 @@ export default function FAQ() {
                 <div className="flex flex-col justify-center items-start w-full gap-8">
                     <div >
                         <p className=" text-xl lg:text-2xl  underline"> Is it free to use?</p>
-                        <p>
+                        <p className="text-sm lg:text-base">
                             Yes, our service is completely free to use! You can search for recipes, input your ingredients, and find meals you can make without any cost.
 
                         </p>
                     </div>
                     <div >
                         <p className="text-xl lg:text-2xl underline">Where does your cost data come from?</p>
-                        <p>
+                        <p className="text-sm lg:text-base">
                             Currently it is an estimated price based on average costs of aggregated supermarket data. Since grocery prices do range (sometimes considerably) from region to region and store to store, we hope to have prices based on user location or an option to enter your own prices in the future.
 
                         </p>
                     </div>
                     <div>
                         <p className="text-xl lg:text-2xl underline">How are the different diets defined?</p>
-                        <p>
+                        <p className="text-sm lg:text-base">
                            <span className="font-semibold">Gluten Free: </span>  Eliminating gluten means avoiding wheat, barley, rye, and other gluten-containing grains and foods made from them (or that may have been cross contaminated). <br />
                            <span className="font-semibold">Ketogenic: </span>
                              The keto diet is based more on the ratio of fat, protein, and carbs in the diet rather than specific ingredients. Generally speaking, high fat, protein-rich foods are acceptable and high carbohydrate foods are not. <br />
@@ -52,13 +52,13 @@ export default function FAQ() {
                     </div>
                     <div>
                         <p className="text-xl lg:text-2xl underline">I want to make a "What's in my fridge?". How do I do this?</p>
-                        <p>
+                        <p className="text-sm lg:text-base">
                             Yes, you can! Simply enter the ingredients you have in your fridge into our search feature, and we'll show you recipes that you can make with those ingredients. Our smart recipe finder matches your available ingredients with delicious recipes, helping you make the most of what you already have.
                         </p>
                     </div>
                     <div>
                         <p className="text-xl lg:text-2xl underline"> How can I search recipes by the equipment used?</p>
-                        <p>  Yes, you can! Simply select the equipment you have, such as a blender, oven, or slow cooker, and we'll show you recipes that specifically use those tools. This way, you can easily find recipes that match the equipment you have at home</p>
+                        <p className="text-sm lg:text-base">  Yes, you can! Simply select the equipment you have, such as a blender, oven, or slow cooker, and we'll show you recipes that specifically use those tools. This way, you can easily find recipes that match the equipment you have at home</p>
                     </div>
 
 

@@ -10,9 +10,9 @@ const port = process.env.PORT || 4000;
 env.config();
 
 const allowedOrigins = [
-    'http://localhost:5173',  // Local development
-    'https://pies-client.vercel.app', // Production
-    'https://pies-client-a8g9byi84-girish-kelengs-projects.vercel.app' // Another client URL
+   process.env.ALLOW_ORIGIN_1, // Local development
+   process.env.ALLOW_ORIGIN_2, // Production
+   process.env.ALLOW_ORIGIN_3 // Another client URL
 ];
 
 app.use(cors({

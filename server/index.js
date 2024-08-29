@@ -9,10 +9,13 @@ const port = process.env.PORT || 4000;
 
 env.config();
 
+const allowedOrigin_1 = process.env.ALLOW_ORIGIN_1;
+const allowedOrigin_2 = process.env.ALLOW_ORIGIN_2;
+
 const allowedOrigins = [
-   process.env.ALLOW_ORIGIN_1, // Local development
-   process.env.ALLOW_ORIGIN_2, // Production
-   process.env.ALLOW_ORIGIN_3 // Another client URL
+    allowedOrigin_1, // Local development
+    allowedOrigin_2 // Production
+ 
 ];
 
 app.use(cors({

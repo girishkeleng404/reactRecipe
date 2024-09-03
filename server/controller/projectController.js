@@ -48,4 +48,4 @@ const details = async (req, res) => {
 
 }
 
-module.exports = dishs;
+module.exports = {dishs, details};

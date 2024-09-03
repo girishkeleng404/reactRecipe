@@ -40,21 +40,6 @@ app.get('/', async (req, res) => {
  
 app.use(projectRoute);
 
-app.post('/details/:id', async (req, res) => {
-    const { id } = req.params;
-
-    try {
-        const response = await axios.get(`${API2}${id}${API3}`, config);
-        if (response.data === 0) {
-            res.json({ message: "No data found" });
-        } else {
-            res.json(response.data);
-        }
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: 'Internal Server Error' });
-    }
-});
 
 app.use(randomRoute);
 

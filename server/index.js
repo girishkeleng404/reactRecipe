@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from 'body-parser';
 import env from 'dotenv';
 import axios from 'axios';
+import randomRoute from './routes/randomRoute';
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -39,7 +40,7 @@ app.get('/', async (req, res) => {
 const API1 = process.env.API1;
 const API2 = process.env.API2;
 const API3 = process.env.API3;
-const API4 = process.env.API4; 
+
 
 const config = {
     headers: {
@@ -74,15 +75,17 @@ app.post('/details/:id', async (req, res) => {
     }
 });
 
-app.get('/random', async (req, res) => {
-    try {
-        const response = await axios.get(`${API4}`, config);
-        res.json(response.data);
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: 'Internal Server Error' });
-    }
-});
+// app.get('/random', async (req, res) => {
+//     try {
+//         const response = await axios.get(`${API4}`, config);
+//         res.json(response.data);
+//     } catch (error) {
+//         console.log(error);
+//         res.status(500).json({ message: 'Internal Server Error' });
+//     }
+// });
+
+app.use(randomRoute);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

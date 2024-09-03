@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const env = require('dotenv');
 const axios = require('axios');
 const randomRoute = require('./routes/randomRoute.js');
+const projectRoute = require('./routes/projectRoute.js');
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -44,7 +45,7 @@ const config = {
         "x-api-key": process.env.API_KEY
     },
 };
-
+app.use(projectRoute);
 
 app.post('/details/:id', async (req, res) => {
     const { id } = req.params;

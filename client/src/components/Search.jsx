@@ -13,7 +13,7 @@ export default function Search() {
 
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:5173/random", {
+                const response = await fetch("http://localhost:4000/random", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"

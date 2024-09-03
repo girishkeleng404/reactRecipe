@@ -1,9 +1,15 @@
-import express from "express";
-import cors from "cors";
-import bodyParser from 'body-parser';
-import env from 'dotenv';
-import axios from 'axios';
+// import express from "express";
+const express = require('express');
+// import cors from "cors";
+const cors = require('cors');
+// import bodyParser from 'body-parser';
+const bodyParser = require('body-parser');
+// import env from 'dotenv';
+const env = require('dotenv');
+// import axios from 'axios';
+const axios = require('axios');
 // import randomRoute from './routes/randomRoute.js';
+const randomRoute = require('./routes/randomRoute.js');
 
 const app = express();
 const port = process.env.PORT || 4000;

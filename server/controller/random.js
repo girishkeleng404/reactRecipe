@@ -1,7 +1,13 @@
-import axios from 'axios';
+
+const axios = require('axios');
 
 const random = async (req, res) => {
     const API4 = process.env.API4;
+    const config = {
+        headers: {
+            "x-api-key": process.env.API_KEY
+        },
+    };
 
     try {
         const response = await axios.get(API4, config);
@@ -12,4 +18,4 @@ const random = async (req, res) => {
     }
 };
 
-export default random;
+module.exports = random;

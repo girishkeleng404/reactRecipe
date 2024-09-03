@@ -1,19 +1,12 @@
-// import express from "express";
 const express = require('express');
-// import cors from "cors";
 const cors = require('cors');
-// import bodyParser from 'body-parser';
 const bodyParser = require('body-parser');
-// import env from 'dotenv';
 const env = require('dotenv');
-// import axios from 'axios';
 const axios = require('axios');
-// import randomRoute from './routes/randomRoute.js';
 const randomRoute = require('./routes/randomRoute.js');
 
 const app = express();
 const port = process.env.PORT || 4000;
-
 env.config();
 
 const allowedOrigin_1 = process.env.ALLOW_ORIGIN_1;
@@ -43,10 +36,8 @@ app.get('/', async (req, res) => {
     res.send('Hello World');
 });
 
-const API1 = process.env.API1;
 const API2 = process.env.API2;
 const API3 = process.env.API3;
-
 
 const config = {
     headers: {
@@ -54,16 +45,6 @@ const config = {
     },
 };
 
-// app.post("/dishs", async (req, res) => {
-//     const { dishName, cuisine, diet, type, includeIngredients, excludeIngredients } = req.body;
-//     try {
-//         const response = await axios.get(`${API1}query=${dishName}&cuisine=${cuisine}&diet=${diet}&type=${type}&includeIngredients=${includeIngredients}&excludeIngredients=${excludeIngredients}&number=50`, config);
-//         res.json(response.data);
-//     } catch (error) {
-//         console.log(error);
-//         res.status(500).json({ message: 'Internal Server Error' });
-//     }
-// });
 
 app.post('/details/:id', async (req, res) => {
     const { id } = req.params;
@@ -80,7 +61,6 @@ app.post('/details/:id', async (req, res) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 });
-
 
 app.use(randomRoute);
 

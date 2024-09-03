@@ -36,11 +36,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', async (req, res) => {
     res.send('Hello World');
 });
-
  
 app.use(projectRoute);
-
-
 app.use(randomRoute);
 
 app.listen(port, () => {

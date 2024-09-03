@@ -13,7 +13,7 @@ export default function Search() {
 
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:4000/random", {
+                const response = await fetch("https://pies-server.vercel.app/random", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"

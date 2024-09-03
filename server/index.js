@@ -37,14 +37,7 @@ app.get('/', async (req, res) => {
     res.send('Hello World');
 });
 
-const API2 = process.env.API2;
-const API3 = process.env.API3;
-
-const config = {
-    headers: {
-        "x-api-key": process.env.API_KEY
-    },
-};
+ 
 app.use(projectRoute);
 
 app.post('/details/:id', async (req, res) => {

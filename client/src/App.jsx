@@ -11,6 +11,7 @@ import FAQ from './components/Footers/FAQ';
 import TnP from './components/Footers/T&P';
 import ContactFun from './components/Footers/Contact';
 import AboutFun from './components/Footers/About';
+import News from './components/Footers/News';
  
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
     <Route path='/t&p' element={<TnP/>}/>
     <Route path='/about' element={<AboutFun/>}/>
     <Route path='/contact' element={<ContactFun/>}/>
+    <Route path='/news' element={<News/>}/>
    
   </Routes>
   )

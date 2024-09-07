@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const env = require('dotenv');
-const axios = require('axios');
 const randomRoute = require('./routes/randomRoute.js');
 const projectRoute = require('./routes/projectRoute.js');
 
@@ -16,7 +15,6 @@ const allowedOrigin_2 = process.env.ALLOW_ORIGIN_2;
 const allowedOrigins = [
     allowedOrigin_1, // Local development
     allowedOrigin_2 // Production
- 
 ];
 
 app.use(cors({

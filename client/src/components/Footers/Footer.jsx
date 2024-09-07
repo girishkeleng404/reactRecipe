@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className=''>
                     <Link to={`/`} className="font-bold text-white mb-4">pies.com</Link>
                     <ul className='mt-4'>
-                        <li><a href="#" className="hover:underline">News</a></li>
+                        <li><Link to={`/news`} className="hover:underline">News</Link></li>
                         <li><a href="https://github.com/girishkeleng404/reactRecipe" className="hover:underline">GitHub</a></li>
                         {/* <li><a href="#" className="hover:underline">Discord</a></li> */}
                          

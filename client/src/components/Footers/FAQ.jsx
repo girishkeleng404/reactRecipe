@@ -83,9 +83,6 @@ export default function FAQ() {
                     </Accordion>
 
 
-                 
-                  
-
 
                 </div>
 

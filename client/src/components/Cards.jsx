@@ -63,7 +63,7 @@ export default function Cards({ recipesPerPage, data, gridClassName, x, y }) {
                         currentRecipes.map((dish, inx) => (
                             <Link to={`/details/${dish.id}`} key={dish.id} className="flex justify-center items-center mb-8 rounded-lg hover:drop-shadow-2xl transition-all duration-300s ">
 
-
+{/* 
 
                                 <div className="relative group duration-500 cursor-pointer group overflow-hidden  text-gray-50 h-72 w-60  rounded-2xl hover:duration-700 ">
                                     <div className="w-60 h-80  text-gray-800">
@@ -114,14 +114,15 @@ export default function Cards({ recipesPerPage, data, gridClassName, x, y }) {
                                         </div>
                                     </div>
                                     <div className="absolute bg-gray-50 -bottom-24 w-60 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-                                        {/* <span className="text-lime-400 font-bold text-xs">Pies.com</span> */}
+                                        <span className="text-lime-400 font-bold text-xs">Pies.com</span>
                                         <span className="text-gray-800 font-bold text-2xl"> {dish.title}</span>
                                         <p className="text-neutral-800">
-                                        {/* {dish.title} */}
+                                        {dish.title}
                                         </p>
                                     </div>
                                 </div>
 
+ */}
 
 
 
@@ -136,8 +137,7 @@ export default function Cards({ recipesPerPage, data, gridClassName, x, y }) {
 
 
 
-
-                                {/* 
+                                
                 <div className="">
 
 
@@ -147,7 +147,7 @@ export default function Cards({ recipesPerPage, data, gridClassName, x, y }) {
                         className="w-full h-60 object-cover rounded-lg "
                     />
                     <h3 className="recipe-title text-base lg:text-lg dark:text-gray-300 pt-1">{dish.title}</h3>
-                </div> */}
+                </div>
 
 
 

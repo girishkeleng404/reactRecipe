@@ -1,7 +1,7 @@
 export default function DetailsHead({ details }) {
     return (
-        <div>
-            <div className="grid grid-cols-[5fr_2fr] items-center">
+        <div className="">
+            <div className="grid grid-cols-[5fr_2fr] items-center ">
                 <div>
                     <h1 className="text-3xl lg:text-5xl text-gray-700 mx-4 dark:text-gray-300"> {details.title} </h1>
 

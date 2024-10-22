@@ -56,7 +56,7 @@ export default function DetailsPage() {
     };
 
     return (
-        <div className="overflow-x-hidden relative flex flex-col items-center">
+        <div className="overflow-x-hidden relative flex flex-col items-center ">
 
             <div className="fixed top-0 z-10 flex items-center bg-white/30 w-screen justify-center backdrop-blur-2xl ">
             {/* dark:bg-neutral-900 dark:bg-opacity-50 */}
@@ -67,7 +67,7 @@ export default function DetailsPage() {
 
             <div className="w-screen lg:w-9/12 bg-slate-50 mx-auto mt-20 lg:mt-24 ">
 
-                <div className="grid gap-6 py-6 font-serif lg:pt-12">
+                <div className="grid gap-6 py-6 font-serif lg:pt-12  ">
                     <DetailsHead details={details} />
 
          <Fade> 

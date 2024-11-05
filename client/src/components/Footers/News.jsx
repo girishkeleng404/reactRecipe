@@ -5,7 +5,7 @@ export default function News(){
     return(
         <div>
         <ErrorFun/>
-        <CardTailwind/>
+      {/*  <CardTailwind/> */}
         </div>
     )
 }
